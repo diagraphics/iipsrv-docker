@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  iipsrv:
+    build: .
+    image: ghcr.io/diagraphics/iipsrv:latest
+    container_name: iipsrv
+    ports:
+      - "8080:80"
+
+    environment:
+      - IIPSRV_BIND=/run/lighttpd.sock
